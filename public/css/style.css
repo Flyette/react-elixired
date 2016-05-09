@@ -2,3 +2,9 @@ body {
   background-color: teal; }
 
 /*# sourceMappingURL=style.css.map */
+#textArea {
+	float: left;
+}
+#markdownArea {
+	float: right;
+}

@@ -3,11 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>React all the things !</title>
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="../public/css/style.css">
+	<script src="../node_modules/codemirror/lib/codemirror.js"></script>
+	<link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+	<script src="mode/javascript/javascript.js"></script>
 </head>
 <body>
 	<h1>React</h1>
-	<div id="hello"></div>
+	<form action="">
+		<input type="button" value="texte" onclick="insertTag('<h1>', '</h1>', 'textarea')">
+		<textarea id="textMarkdown"></textarea>
+		<div id="text"></div>
+	</form>
 	<script src="/js/bundle.js"></script>
+	<script src="../resources/assets/js/app.js" ></script>
 </body>
 </html>
