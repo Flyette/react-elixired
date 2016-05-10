@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 	<meta charset="UTF-8">
 	<title>React all the things !</title>
-	<link rel="stylesheet" href="../public/css/style.css">
-	<script src="../node_modules/codemirror/lib/codemirror.js"></script>
-	<link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
-	<script src="mode/javascript/javascript.js"></script>
+	<link rel="stylesheet" href="css/codemirror.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>React</h1>
-	<form action="">
-		<input type="button" value="texte" onclick="insertTag('<h1>', '</h1>', 'textarea')">
-		<textarea id="textMarkdown"></textarea>
+	<h1>Editeur : Markdown / Html</h1>
+		<div id="textmd"></div>
 		<div id="text"></div>
-	</form>
-	<script src="/js/bundle.js"></script>
-	<script src="../resources/assets/js/app.js" ></script>
+		<button id="view">show</button>
 </body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/codemirror.js"></script>
+	<script src="mode/javascript/javascript.js"></script>
+	<script src="js/markdown.js"></script>
+	<script src="js/bundle.js"></script>
 </html>
+
