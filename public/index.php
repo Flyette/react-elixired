@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Editeur : Markdown / Html</h1>
+	<h1 id="titre">Editeur : Markdown / Html</h1>
 
 <!-- 	<script>
 		function set() {
@@ -25,19 +25,20 @@
 			document.getElementById('textmd').getValue = localStorage.getItem(filename);
 		}
 	</script> -->
-	<div id="editeur">
-	<form method="POST" action="index.php" name="editor">
-		<textarea onclick="this.value=''" name="data" id="textmd"></textarea>
-		<input name="filename" placeholder="nom du fichier">
-		<input type="submit" value="Sauvegarde" name="sauvegarde">
-		<input type="submit" placeholder="nom du fichier" value="cherche" name="cherche">
-		<div id="editeur">
-
-		</form>	
-		<div id="text"></div>
+	<h1 id="titre">Fichier : <?= $_POST['filename']; ?></h1>
+	<div class="container">
+		<div class="editeur">
+			<form method="POST" action="index.php" name="editor">
+				<textarea onclick="this.value=''" name="data" id="textmd"><?php if(isset($_POST['cherche'])){ echo $_SESSION[$nom];} ?></textarea>
+				<p><input name="filename" placeholder="nom du fichier"></p>
+				<button type="submit" value="Sauvegarder" name="sauvegarde">Sauvegarder</button>
+				<button type="submit" placeholder="nom du fichier" value="Chercher" name="cherche">Chercher</button>
+			</form>	
+		</div>
+		<div class="edit">
+			<div id="text"></div>
+		</div>
 	</div>
-	<h1><?= $_SESSION[$nom]; ?></h1>
-	<h1><?= $_POST['filename']; ?></h1>
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/codemirror.js"></script>

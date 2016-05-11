@@ -1,21 +1,40 @@
 body {
-  background-color: teal; }
+  background-color: #fdc23e ; }
 
-# sourceMappingURL=style.css.map 
+/*# sourceMappingURL=style.css.map */
 
+.container{
+	display: flex;
+	justify-content: center;
 }
-#editeur{
-	display: inline-block;
-}
-#textmd {
-	float: left;
+
+.editeur{
+	font-size: 16px;
 	width: 40%;
+	height: 500px;
+
 }
 
-#text {
-	margin-left: 60%;
+.edit{
+	margin-left: 5px;
+	color: white;
+	font-size: 16px;
+	background-color: #274555;
+	width: 40%;
+	height: 301px;
 }
 
-#view {
-	position: fixed;
+#titre{
+	color: #274555;
+	text-align: center;
+}
+button{
+	color: white;
+	margin-top: 10px;
+	border: none;
+	width: 30%;
+	height: 30px;
+	background-color: #274555;
+	border-radius: 3px;
+	font-size: 16px;
 }

@@ -18,11 +18,10 @@ function init(){
 function reset(){
 	setInterval(getText, 200);
 }
+//prend la valeur de l'editeur markdown et change en html
 function getText(){
-
 	var text = fieldmd.getValue();
 	document.getElementById('text').innerHTML = marked(text);
-	
 };
 
 init();	
