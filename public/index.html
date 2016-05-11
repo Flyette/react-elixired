@@ -10,7 +10,7 @@
 <body>
 	<h1>Editeur : Markdown / Html</h1>
 
-	<script>
+<!-- 	<script>
 		function set() {
 			filename = document.forms["editor"].filename.value;
 			data = document.getElementById('textmd').getValue;
@@ -23,12 +23,12 @@
 			filename = document.forms["editor"].filename.value;
 			document.getElementById('textmd').getValue = localStorage.getItem(filename);
 		}
-	</script>
+	</script> -->
 	<div id="editeur">
+	<form method="POST" action="session.php" name="editor">
 		<textarea onclick="this.value=''" name="data" id="textmd"></textarea>
-	<form name="editor">
 		<input name="filename" placeholder="nom du fichier">
-		<input type="button" value="Sauvegarde" onclick="set()">
+		<input type="submit" value="Sauvegarde" name="submit">
 		<input type="button" placeholder="nom du fichier" value="Chercher" onclick="get()">
 		<div id="editeur">
 
