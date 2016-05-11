@@ -1,32 +1,28 @@
 var marked = require('marked');
 console.log(marked('I am using __markdown__.'));
 
+//affiche l'editeur
+var fieldmd = CodeMirror.fromTextArea(document.getElementById('textmd'), {
+	value: "write markdown",
+	mode: "text/x-markdown",
+	lineNumbers: true,
+	theme: "default",
+	autofocus: true
+});
 
 function init(){
-	var fieldmd = CodeMirror(document.getElementById('textmd'), {
-		value: "write markdown",
-		mode: "text/x-markdown",
-		lineNumbers: true,
-		theme: "default",
-		autofocus: true
-	})
-	fieldmd.refresh();
-	getText(fieldmd);
+	reset();
 };
 
-function getText(fieldmd){
-	$('#view').on('click', function(){
-		var text = fieldmd.getValue();
-		markdownToHtml(text);
-	});
+//repetition
+function reset(){
+	setInterval(getText, 200);
+}
+function getText(){
+
+	var text = fieldmd.getValue();
+	document.getElementById('text').innerHTML = marked(text);
+	
 };
 
-function setText(text){
-	$('#text').html(text);
-};
-
-function markdownToHtml(text){
-	var text = marked(text);
-	setText(text);
-};
 init();	

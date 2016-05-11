@@ -9,14 +9,39 @@
 </head>
 <body>
 	<h1>Editeur : Markdown / Html</h1>
-		<div id="textmd"></div>
+
+	<script>
+		function set() {
+			filename = document.forms["editor"].filename.value;
+			data = document.getElementById('textmd').getValue;
+			console.log('ici le texte');
+			console.log(data);
+			localStorage.setItem(filename, data);
+			document.forms["editor"].value = "";
+		}
+		function get() {
+			filename = document.forms["editor"].filename.value;
+			document.getElementById('textmd').getValue = localStorage.getItem(filename);
+		}
+	</script>
+	<div id="editeur">
+		<textarea onclick="this.value=''" name="data" id="textmd"></textarea>
+	<form name="editor">
+		<input name="filename" placeholder="nom du fichier">
+		<input type="button" value="Sauvegarde" onclick="set()">
+		<input type="button" placeholder="nom du fichier" value="Chercher" onclick="get()">
+		<div id="editeur">
+
+		</form>	
 		<div id="text"></div>
-		<button id="view">show</button>
+	</div>
 </body>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/codemirror.js"></script>
-	<script src="mode/javascript/javascript.js"></script>
-	<script src="js/markdown.js"></script>
-	<script src="js/bundle.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/codemirror.js"></script>
+<script src="mode/javascript/javascript.js"></script>
+<script src="js/markdown.js"></script>
+<script src="js/bundle.js"></script>
+
 </html>
+
 

@@ -1,12 +1,21 @@
 body {
   background-color: teal; }
 
-/*# sourceMappingURL=style.css.map */
+# sourceMappingURL=style.css.map 
+
+}
+#editeur{
+	display: inline-block;
+}
 #textmd {
-
+	float: left;
+	width: 40%;
 }
+
 #text {
+	margin-left: 60%;
 }
-#view {
 
+#view {
+	position: fixed;
 }
