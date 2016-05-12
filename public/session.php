@@ -9,7 +9,9 @@ if(isset($_POST['sauvegarde'])){
 //on cherche la valeur de la clef postee
 if(isset($_POST['cherche'])){
 	$nom = $_POST['filename'];
+	if(isset($_SESSION[$nom])){
 	$_SESSION['data'] = $_SESSION[$nom];
+	}
 }
 ?>
 
