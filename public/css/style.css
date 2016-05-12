@@ -10,8 +10,8 @@ body {
 
 .editeur{
 	font-size: 16px;
-	width: 40%;
-	height: 500px;
+	width: 50%;
+	height: 100%;
 
 }
 
@@ -20,8 +20,8 @@ body {
 	color: white;
 	font-size: 16px;
 	background-color: #274555;
-	width: 40%;
-	height: 301px;
+	width: 50%;
+	height: 100%;
 }
 
 #titre{
