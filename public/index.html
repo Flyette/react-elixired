@@ -24,11 +24,10 @@
 		document.getElementById('textmd').getValue = localStorage.getItem(filename);
 	}
 	</script>
-	<h1 id="titre">Fichier : <?= $_POST['filename']; ?></h1>
 	<div class="container">
 		<div class="editeur">
 			<form method="POST" action="index.php" name="editor">
-				<textarea onclick="this.value=''" name="data" id="textmd"><?php if(isset($_POST['cherche'])){ echo $_SESSION[$nom];} ?></textarea>
+				<textarea onclick="this.value=''" name="data" id="textmd"></textarea>
 				<p><input name="filename" placeholder="nom du fichier"></p>
 				<button type="submit" value="Sauvegarder" name="sauvegarde" onclick="set()">Sauvegarder</button>
 				<button type="submit" placeholder="nom du fichier" value="Chercher" name="cherche" onclick="get()">Chercher</button>
